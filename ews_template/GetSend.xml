@@ -1,0 +1,20 @@
+<soapenv:Envelope 
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+<soapenv:Header> 
+<fueloauth xmlns="https://exacttarget.com">***AUTH_TOKEN HERE***</fueloauth> 
+</soapenv:Header> 
+<soapenv:Body> 
+<RetrieveRequestMsg xmlns="http://exacttarget.com/wsdl/partnerAPI"> 
+<RetrieveRequest> <!-- Replace SentEvent with other desired metrics --> 
+<ObjectType>SentEvent</ObjectType> 
+<Properties>SubscriberKey</Properties> 
+<Properties>TriggeredSendDefinitionObjectID</Properties> 
+<Properties>SendID</Properties> 
+<Properties>BatchID</Properties> 
+<Properties>EventType</Properties> 
+</RetrieveRequest> 
+</RetrieveRequestMsg> 
+</soapenv:Body> 
+</soapenv:Envelope>
